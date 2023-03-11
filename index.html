@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOOD HUNT</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body onload="loadFoodData()">
+  <header class="container mx-auto px-3">
+    <div class="flex justify-between items-center py-5">
+      <a href="/" class="text-3xl font-bold">FOOD HUNT</a>
+      <button class="h-16 bg-yellow-400 text-black py-3 px-6  text-center rounded text-xl">Sing Up</button>
+
+    </div>
+
+  </header>
+  <main>
+    <!-- hero -->
+    <section>
+
+      <div class="bg-no-repeat bg-cover " style="background-image: url(./images/banner_1.png);">
+        <div class="w-full max-w-3xl mx-auto text-center text-white px-6">
+          <h1 class="mb-5 text-5xl font-bold pt-32">Taste Our Delicious Best Foods</h1>
+          <p class="mb-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+            alteration in some form, by injected humou.</p>
+          <div class="flex items-center justify-center pb-32 ">
+            <input id="food-name" type="text"
+              class=" h-[64px] p-4 rounded-lg  text-start text-black focus:outline-none hover:outline-none border-none bg-white text-xl hover:bg-white"
+              placeholder="Enter a food name">
+            <button onclick="loadFoodData()"
+              class=" h-[64px] py-4 px-6 text-center text-xl bg-yellow-400 border-none text-black ml-[-20px] hover:text-white  hover:bg-black rounded-r-lg">Search</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- body sections -->
+    <section class="w-full max-w-7xl mx-auto">
+      <h1 class=" container mx-auto px-4 text-center text-4xl font-bold my-5">Your Favourite Food</h1>
+      <!-- all food section -->
+      <div id="display-food"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 gap-6 py-4	content-center	justify-items-center ">
+      </div>
+    </section>
+
+    <!-- modal -->
+    <section id="food-modal">
+      <div class="modal" id="my-modal-2">
+        <div class="modal-box">
+          <h3 id="meal-name" class="font-bold text-lg"></h3>
+          <p id="meal-details" class="py-4"></p>
+          <div class="modal-action">
+            <a href="#" class="btn">close</a>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    </section>
+    <section id="not-found" class="container mx-auto px-6 mb-9">
+
+    </section>
+  </main>
+  <footer class="footer p-10 bg-base-200 text-base-content">
+    <div class="footer container mx-auto">
+      <div>
+        <span class="footer-title">Services</span>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </div>
+
+      <div>
+        <span class="footer-title">Legal</span>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </div>
+      <div>
+        <span class="footer-title">Newsletter</span>
+        <div class="form-control w-80">
+          <label class="label">
+            <span class="label-text">Enter your email address</span>
+          </label>
+          <div class="relative">
+            <input type="text" placeholder="username@site.com" class="input input-bordered w-full pr-16" />
+            <button
+              class="btn btn-primary absolute top-0 right-0 rounded-l-none bg-yellow-400 text-black hover:bg-black hover:text-white">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <script src="./app.js"></script>
+</body>
+
+
+</html>
